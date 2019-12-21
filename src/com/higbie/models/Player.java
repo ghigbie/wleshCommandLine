@@ -46,6 +46,10 @@ public class Player {
         this.maxLife = maxLife;
     }
 
+    private void createPlayer(){
+
+    }
+
     private void declarePlayer(){
         System.out.println("You are the great" + this.name + "!");
         System.out.println("Your battlePower is " + this.battlePower + ".");
