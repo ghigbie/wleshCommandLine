@@ -1,5 +1,7 @@
 package com.higbie.game_play;
 
+import com.higbie.models.Player;
+
 public class StartGame {
 
     public static void loadGame(){
@@ -11,7 +13,9 @@ public class StartGame {
         System.out.println("Someone yells, \"Tell me your name so I may know the name of the captive creature I kill!\"");
         System.out.println("*********************************************");
         System.out.println("");
-        System.out.println("What shall you be called? ");
+
+        Player.createPlayer();
     }
+
 
 }

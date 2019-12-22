@@ -13,12 +13,13 @@ public class Main {
 
         StartGame.loadGame();
 
-        Scanner scanner = new Scanner(System.in);
-        String playerName = scanner.next();
+//        Scanner scanner = new Scanner(System.in);
+//        String playerName = scanner.next();
+//
+//        Player player = new Player(playerName, 10, 100, 100);
+//        player.declarePlayer();
 
-        Player player = new Player(playerName, 10, 100, 100);
-        player.declarePlayer();
-
+        Player.createPlayer();
 
         while(isPlaying){
 
