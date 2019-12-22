@@ -19,7 +19,7 @@ public class Main {
 //        Player player = new Player(playerName, 10, 100, 100);
 //        player.declarePlayer();
 
-        Player.createPlayer();
+        //Player.createPlayer();
 
         while(isPlaying){
 

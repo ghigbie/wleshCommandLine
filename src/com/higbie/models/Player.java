@@ -1,5 +1,7 @@
 package com.higbie.models;
 
+import com.higbie.game_play.EndGame;
+
 import java.sql.SQLOutput;
 import java.util.Scanner;
 
@@ -76,7 +78,7 @@ public class Player {
         System.out.println("Your total battle power is "+ getBattlePower());
     }
 
-    public static void firstBattle(){
+    public void firstBattle(){
         boolean willFight;
         int choice;
         Scanner scanner = new Scanner(System.in);
@@ -87,15 +89,15 @@ public class Player {
 
         switch(choice){
             case 1:
-                System.out.println("You thrust your spear into the throat of that Saxon creature,");
+                System.out.println("You pick up your spear and thrust it into the throat of that Saxon creature,");
                 System.out.println("and you hear the sound of death in crackle in his throat.");
-
+                win(5);
                 break;
             case 2:
                 System.out.println("You turn and run! You feel a spear suddenly pierce you back.");
                 System.out.println("You drop to your knees in a pool of your own blood. Coward!");
                 System.out.println("You die. May your soul wonder the earth for eternity.");
-
+                EndGame.endGameInDisgrace();
                 break;
             default:
                 System.out.println("You must select a value oe either  \"1\" to fight or \"2\" to run.");
