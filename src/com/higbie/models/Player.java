@@ -1,8 +1,8 @@
 package com.higbie.models;
 
 import com.higbie.game_play.EndGame;
+import com.higbie.game_play.PrintUtility;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Player {
@@ -55,13 +55,14 @@ public class Player {
         this.maxLife = maxLife;
     }
 
-    public static void createPlayer(){
+    public static Player createPlayer(){
         System.out.println("What shall you be called?");
         System.out.println("Enter your name below: ");
         Scanner scanner = new Scanner(System.in);
         String playerName = scanner.next();
         Player player = new Player(playerName, 10, 100, 100);
         player.declarePlayer();
+        return player;
     }
 
     public void declarePlayer(){
@@ -82,7 +83,7 @@ public class Player {
         boolean willFight;
         int choice;
         Scanner scanner = new Scanner(System.in);
-
+        PrintUtility.printStarLine();
         System.out.println("You must kill this Saxon pig! You can either pick up your spear or run.");
         System.out.println("Enter \"1\" to fight or \"2\" to run.");
         choice = scanner.nextInt();
@@ -101,6 +102,7 @@ public class Player {
                 break;
             default:
                 System.out.println("You must select a value oe either  \"1\" to fight or \"2\" to run.");
+                this.firstBattle();
         }
     }
 }

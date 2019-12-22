@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1845106-5841-4180-a383-4a452ca18950" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/higbie/game_play/EndGame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/higbie/game_play/PrintUtility.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/higbie/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/higbie/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/command_line_welsh_rpg/com/higbie/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/command_line_welsh_rpg/com/higbie/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/command_line_welsh_rpg/com/higbie/game_play/StartGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/command_line_welsh_rpg/com/higbie/game_play/StartGame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/command_line_welsh_rpg/com/higbie/models/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/command_line_welsh_rpg/com/higbie/models/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/higbie/game_play/EndGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/higbie/game_play/EndGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/higbie/game_play/StartGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/higbie/game_play/StartGame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/higbie/models/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/higbie/models/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,7 +78,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1576895423841</updated>
-      <workItem from="1576895431706" duration="7781000" />
+      <workItem from="1576895431706" duration="9044000" />
     </task>
     <servers />
   </component>
@@ -85,21 +90,25 @@
       <screen x="0" y="23" width="1440" height="823" />
     </state>
     <state x="969" y="105" key="#com.intellij.ide.util.MemberChooser/0.23.1440.823@0.23.1440.823" timestamp="1576897427516" />
-    <state width="1358" height="198" key="GridCell.Tab.0.bottom" timestamp="1576980606844">
-      <screen x="0" y="23" width="1440" height="823" />
+    <state width="1358" height="198" key="GridCell.Tab.0.bottom" timestamp="1576981963317">
+      <screen x="0" y="23" width="1440" height="825" />
     </state>
     <state width="1358" height="198" key="GridCell.Tab.0.bottom/0.23.1440.823@0.23.1440.823" timestamp="1576980606844" />
-    <state width="1358" height="198" key="GridCell.Tab.0.center" timestamp="1576980606844">
-      <screen x="0" y="23" width="1440" height="823" />
+    <state width="1358" height="198" key="GridCell.Tab.0.bottom/0.23.1440.825@0.23.1440.825" timestamp="1576981963317" />
+    <state width="1358" height="198" key="GridCell.Tab.0.center" timestamp="1576981963316">
+      <screen x="0" y="23" width="1440" height="825" />
     </state>
     <state width="1358" height="198" key="GridCell.Tab.0.center/0.23.1440.823@0.23.1440.823" timestamp="1576980606844" />
-    <state width="1358" height="198" key="GridCell.Tab.0.left" timestamp="1576980606843">
-      <screen x="0" y="23" width="1440" height="823" />
+    <state width="1358" height="198" key="GridCell.Tab.0.center/0.23.1440.825@0.23.1440.825" timestamp="1576981963316" />
+    <state width="1358" height="198" key="GridCell.Tab.0.left" timestamp="1576981963316">
+      <screen x="0" y="23" width="1440" height="825" />
     </state>
     <state width="1358" height="198" key="GridCell.Tab.0.left/0.23.1440.823@0.23.1440.823" timestamp="1576980606843" />
-    <state width="1358" height="198" key="GridCell.Tab.0.right" timestamp="1576980606844">
-      <screen x="0" y="23" width="1440" height="823" />
+    <state width="1358" height="198" key="GridCell.Tab.0.left/0.23.1440.825@0.23.1440.825" timestamp="1576981963316" />
+    <state width="1358" height="198" key="GridCell.Tab.0.right" timestamp="1576981963317">
+      <screen x="0" y="23" width="1440" height="825" />
     </state>
     <state width="1358" height="198" key="GridCell.Tab.0.right/0.23.1440.823@0.23.1440.823" timestamp="1576980606844" />
+    <state width="1358" height="198" key="GridCell.Tab.0.right/0.23.1440.825@0.23.1440.825" timestamp="1576981963317" />
   </component>
 </project>
