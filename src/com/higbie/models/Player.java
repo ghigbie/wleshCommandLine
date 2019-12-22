@@ -97,7 +97,6 @@ public class Player {
             case 2:
                 System.out.println("You turn and run! You feel a spear suddenly pierce you back.");
                 System.out.println("You drop to your knees in a pool of your own blood. Coward!");
-                System.out.println("You die. May your soul wonder the earth for eternity.");
                 EndGame.endGameInDisgrace();
                 break;
             default:
