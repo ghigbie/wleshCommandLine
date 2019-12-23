@@ -8,10 +8,13 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        boolean isPlaying = true;
+        StartGame startGame = new StartGame();
 
-
-        StartGame.loadGame();
+        try {
+            startGame.loadGame();
+        }catch(Exception e){
+            System.out.println("Error: " + e);
+        }
 
 //        Scanner scanner = new Scanner(System.in);
 //        String playerName = scanner.next();
@@ -21,9 +24,6 @@ public class Main {
 
         //Player.createPlayer();
 
-        while(isPlaying){
-
-        }
 
     }
 

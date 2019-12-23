@@ -9,7 +9,7 @@ public class EndGame {
     public static void endGameInDisgrace(){
         System.out.println("You deserve the death that found you out for being a coward");
         System.out.println("May your soul wonder the earth for eternity.");
-        PrintUtility.gameOverPrint();
+        UtilityMethods.gameOverPrint();
         endGame();
     }
 

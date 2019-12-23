@@ -1,7 +1,7 @@
 package com.higbie.models;
 
 import com.higbie.game_play.EndGame;
-import com.higbie.game_play.PrintUtility;
+import com.higbie.game_play.UtilityMethods;
 
 import java.util.Scanner;
 
@@ -66,11 +66,18 @@ public class Player {
     }
 
     public void declarePlayer(){
-        System.out.println("You realize who you are. You are the great " + this.name + " the mighty!");
+        System.out.println("You realize who you are. You are " + this.name + " the mighty!");
         System.out.println("You yell out your name in a roar and see the shock on your enemy's face.");
-        System.out.println("In a renewed vigor your power and strength come flushing your your body!");
+        System.out.println("In a renewed vigor, your power and strength come flushing through your body!");
         System.out.println("Your battlePower is " + this.battlePower + ".");
-        System.out.println("Your life is " + this.life + " with a maximum life of " + this.maxLife );
+        System.out.println("Your life is " + this.life + "." );
+    }
+
+    public void tellBackStory(){
+        System.out.println("After your quick victory, you realize who you are!");
+        System.out.println("You are a Welsh spearman of the Kingdom of Dumnonia who has been taken prisoner after your shield wall was broken in battle...");
+        System.out.println("You comrades and fellow spearmen were all killed after the shield wall broke, and you were left unconscious.");
+        System.out.println("The world is spinning, your head hurts, and you look up as blood drips from your nose.");
     }
 
     public void win(int increaseValue){
@@ -79,18 +86,17 @@ public class Player {
         System.out.println("Your total battle power is "+ getBattlePower());
     }
 
-    public void firstBattle(){
+    public void battle(){
         boolean willFight;
         int choice;
         Scanner scanner = new Scanner(System.in);
-        PrintUtility.printStarLine();
-        System.out.println("You must kill this Saxon pig! You can either pick up your spear or run.");
+        UtilityMethods.printStarLine();
         System.out.println("Enter \"1\" to fight or \"2\" to run.");
         choice = scanner.nextInt();
 
         switch(choice){
             case 1:
-                System.out.println("You pick up your spear and thrust it into the throat of that Saxon creature,");
+                System.out.println("You pick up your spear and thrust it into the throat of the Saxon spearman,");
                 System.out.println("and you hear the sound of death in crackle in his throat.");
                 win(5);
                 break;
@@ -100,8 +106,8 @@ public class Player {
                 EndGame.endGameInDisgrace();
                 break;
             default:
-                System.out.println("You must select a value oe either  \"1\" to fight or \"2\" to run.");
-                this.firstBattle();
+                System.out.println("You must select a value either  \"1\" to fight or \"2\" to run.");
+                this.battle();
         }
     }
 }

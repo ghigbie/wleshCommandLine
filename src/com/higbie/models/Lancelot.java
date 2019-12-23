@@ -1,6 +1,6 @@
 package com.higbie.models;
 
-public class Lancelot extends Knight{
+public class Lancelot extends Warrior {
 
     private String name = "Lancelot";
 

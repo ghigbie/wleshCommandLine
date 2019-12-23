@@ -1,6 +1,8 @@
 package com.higbie.game_play;
 
-public class PrintUtility {
+import java.util.concurrent.TimeUnit;
+
+public class UtilityMethods {
 
     public static void printStarLine(){
         System.out.println("");
@@ -27,5 +29,9 @@ public class PrintUtility {
                 "  \\/_/   \\/_/   \\/_____/   \\/_____/   \\/_____/   \\/_____/   \\/_/  \\/_/   \\/_____/ \n" +
                 "                                                                                  ");
         printStarLine();
+    }
+
+    public static void delayGamePlay(long secondsToDelay) throws InterruptedException {
+        TimeUnit.SECONDS.sleep(secondsToDelay);
     }
 }

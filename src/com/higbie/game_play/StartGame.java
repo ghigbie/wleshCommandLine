@@ -1,24 +1,53 @@
 package com.higbie.game_play;
 
+import com.higbie.models.Lancelot;
 import com.higbie.models.Player;
+import com.higbie.models.Warrior;
+
+import java.util.concurrent.TimeUnit;
 
 public class StartGame {
 
-    public static void loadGame(){
-        PrintUtility.printStarLine();
-        PrintUtility.startGamePrint();
+    Player player = Player.createPlayer();
+
+    public static void unnanedApproaches(int battlePower, long secondsToDelay, String openingDialogue, String actionLine) throws InterruptedException {
+        UtilityMethods.delayGamePlay(2);
+        UtilityMethods.printStarLine();
+        Warrior warrior = new Warrior(battlePower, openingDialogue);
+        warrior.fightToKill(actionLine);
+    }
+
+    public static void warriorApproaches(String warriorName, int battlePower, long secondsToDelay, String openingDialogue, String actionLine) throws InterruptedException {
+        UtilityMethods.delayGamePlay(2);
+        UtilityMethods.printStarLine();
+        Warrior warrior = new Warrior(warriorName, battlePower, openingDialogue);
+        warrior.fightToKill(actionLine);
+    }
+
+    public void loadGame() throws InterruptedException {
+        UtilityMethods.printStarLine();
+        UtilityMethods.startGamePrint();
         System.out.println("");
-        System.out.println("Someone yells, \"Tell me your name so I may know the name of the captive creature I kill!\"");
-        PrintUtility.printStarLine();
+        unnanedApproaches(10,
+                         2,
+                         "Someone yells, \"Tell me your name so I may know the name of the captive creature I kill!\"",
+                         "\"You must kill this Saxon pig! You can either pick up your spear or run.\"");
+        UtilityMethods.printStarLine();
         System.out.println("");
 
-        Player player = Player.createPlayer();
         player.firstBattle();
-        PrintUtility.printStarLine();
-        System.out.println("You realize who you are!");
-        System.out.println("You are a Welsh spearman of the Kingdom of Dumnonia who has been taken prisoner after your shield wall was broken in battle...");
-        System.out.println("You comrades and fellow spearmen were all killed while you were left unconscious. ");
-        System.out.println("The world is spinning, your head hurts, and you look up as blood drips from your nose.");
+        UtilityMethods.printStarLine();
+        player.tellBackStory();
+
+        UtilityMethods.delayGamePlay(5);
+        System.out.println("You walk down a long, dark corridor...");
+        System.out.println("...");
+
+        warriorApproaches("Gofiffad",
+                          15,
+                          2,
+                          "I am Gofiffad the Ruthless. The gods welcome you home!",
+                          "You must kill Gofiffad or Die! You can either slash him with your sword or run.");
     }
 
 
