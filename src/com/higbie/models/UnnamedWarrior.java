@@ -5,49 +5,17 @@ import com.higbie.game_play.UtilityMethods;
 
 import java.util.Scanner;
 
-public class Warrior {
-    private int battlePower;
-    private String name;
-    private String openingDialogue;
+public class UnnamedWarrior extends Warrior {
 
-    public Warrior(String name, int battlePower, String openingDialogue) {
-        this.battlePower = battlePower;
-        this.name = name;
-        this.openingDialogue = openingDialogue;
+    public UnnamedWarrior(int battlePower, String openingDialogue) {
+        super(battlePower, openingDialogue);
     }
 
-    public Warrior(int battlePower, String openingDialogue) {
-        this.battlePower = battlePower;
-        this.openingDialogue = openingDialogue;
-    }
-
-    public int getBattlePower() {
-        return battlePower;
-    }
-
-    public void setBattlePower(int battlePower) {
-        this.battlePower = battlePower;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getOpeningDialogue() {
-        return openingDialogue;
-    }
-
-    public void setOpeningDialogue(String openingDialogue) {
-        this.openingDialogue = openingDialogue;
-    }
-
-    public void fightToKill(String verbLine){
-       System.out.println(getName() + " draws his weapon and challenges you to fight.");
-       System.out.println("");
+    public void fightToKill() throws InterruptedException {
+        UtilityMethods.delayGamePlay(2);
+        System.out.println("A bute of a spearman draws his weapon and points it at your throat.");
+        System.out.println(getOpeningDialogue());
+        System.out.println("");
     }
 
     public void battle(Player player){

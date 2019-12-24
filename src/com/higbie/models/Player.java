@@ -86,8 +86,7 @@ public class Player {
         System.out.println("Your total battle power is "+ getBattlePower());
     }
 
-    public void battle(){
-        boolean willFight;
+    public void battle(String winLine, String failLine){
         int choice;
         Scanner scanner = new Scanner(System.in);
         UtilityMethods.printStarLine();
@@ -96,18 +95,16 @@ public class Player {
 
         switch(choice){
             case 1:
-                System.out.println("You pick up your spear and thrust it into the throat of the Saxon spearman,");
-                System.out.println("and you hear the sound of death in crackle in his throat.");
+                System.out.println(winLine);
                 win(5);
                 break;
             case 2:
-                System.out.println("You turn and run! You feel a spear suddenly pierce you back.");
-                System.out.println("You drop to your knees in a pool of your own blood. Coward!");
+                System.out.println(failLine);
                 EndGame.endGameInDisgrace();
                 break;
             default:
                 System.out.println("You must select a value either  \"1\" to fight or \"2\" to run.");
-                this.battle();
+                this.battle(winLine, failLine); //recursive use of method
         }
     }
 }
