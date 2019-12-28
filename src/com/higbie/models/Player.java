@@ -3,6 +3,9 @@ package com.higbie.models;
 import com.higbie.game_play.EndGame;
 import com.higbie.game_play.UtilityMethods;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 import java.util.Scanner;
 
 public class Player {
@@ -74,6 +77,16 @@ public class Player {
     }
 
     public void tellBackStory(){
+        File file = new File("com/higbie/textfiles/backstory.txt");
+        try(FileReader fileReader = new FileReader(file)){
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+            String line = null;
+            while((line = bufferedReader.readLine()) != null){
+                System.out.println(line);
+            }
+        }catch (Exception e){
+            System.out.println("There was an error: "+ e);
+        }
         System.out.println("After your quick victory, you realize who you are!");
         System.out.println("You are a Welsh spearman of the Kingdom of Dumnonia who has been taken prisoner after your shield wall was broken in battle...");
         System.out.println("You comrades and fellow spearmen were all killed after the shield wall broke, and you were left unconscious.");
