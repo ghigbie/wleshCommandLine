@@ -13,6 +13,15 @@ public class EndGame {
         endGame();
     }
 
+    public static void winGame(String place){
+        System.out.println("You have defeated all of your enemies and have proved yourself to be the Champion of " + place + ".");
+        System.out.println("You are victorious this time, but remember you are surrounded by foes at all times.");
+        System.out.println("For now, you may rejoice in your victory!");
+        UtilityMethods.useFileReader("src/com/higbie/textfiles/win.txt");
+        UtilityMethods.printStarLine();
+        endGame();
+    }
+
 
 
 
