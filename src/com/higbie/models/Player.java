@@ -77,7 +77,7 @@ public class Player {
     }
 
     public void tellBackStory(){
-        File file = new File("com/higbie/textfiles/backstory.txt");
+        File file = new File("src/com/higbie/textfiles/backstory.txt");
         try(FileReader fileReader = new FileReader(file)){
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             String line = null;
@@ -87,10 +87,6 @@ public class Player {
         }catch (Exception e){
             System.out.println("There was an error: "+ e);
         }
-        System.out.println("After your quick victory, you realize who you are!");
-        System.out.println("You are a Welsh spearman of the Kingdom of Dumnonia who has been taken prisoner after your shield wall was broken in battle...");
-        System.out.println("You comrades and fellow spearmen were all killed after the shield wall broke, and you were left unconscious.");
-        System.out.println("The world is spinning, your head hurts, and you look up as blood drips from your nose.");
     }
 
     public void win(int increaseValue){
