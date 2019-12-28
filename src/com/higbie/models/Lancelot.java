@@ -11,9 +11,10 @@ public class Lancelot extends Warrior {
         super(name, battlePower, openingDialogue);
     }
 
-    @Override
-    public void fightToKill(String verbLine) {
-        super.fightToKill(verbLine);
+    public void fightToKill() throws InterruptedException {
+        UtilityMethods.delayGamePlay(2);
+        System.out.println(getOpeningDialogue());
+        System.out.println("You must kill "+ getName() + " or Die! You can either slash him with your sword or run.");
     }
 
     public void battle(Player player){

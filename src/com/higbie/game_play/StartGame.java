@@ -1,9 +1,6 @@
 package com.higbie.game_play;
 
-import com.higbie.models.Goffifad;
-import com.higbie.models.Player;
-import com.higbie.models.UnnamedWarrior;
-import com.higbie.models.Warrior;
+import com.higbie.models.*;
 
 public class StartGame {
 
@@ -32,6 +29,14 @@ public class StartGame {
         Goffifad goffifad = new Goffifad("Goffifad", 15, "I am Gofiffad the Ruthless. The gods welcome you home!");
         goffifad.fightToKill();
         goffifad.battle(player);
+
+        UtilityMethods.delayGamePlay(5);
+        System.out.println("You continue to walk. You find a room and look around.");
+        System.out.println("You see a familiar face.");
+        String lancelotOpen = "You will die slowly " + player.getName() + "!";
+        Lancelot lancelot = new Lancelot("Lancelot", 20, "");
+        lancelot.fightToKill();
+        lancelot.battle(player);
     }
 
 
