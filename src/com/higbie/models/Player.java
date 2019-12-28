@@ -77,16 +77,7 @@ public class Player {
     }
 
     public void tellBackStory(){
-        File file = new File("src/com/higbie/textfiles/backstory.txt");
-        try(FileReader fileReader = new FileReader(file)){
-            BufferedReader bufferedReader = new BufferedReader(fileReader);
-            String line = null;
-            while((line = bufferedReader.readLine()) != null){
-                System.out.println(line);
-            }
-        }catch (Exception e){
-            System.out.println("There was an error: "+ e);
-        }
+        UtilityMethods.useFileReader("src/com/higbie/textfiles/backstory.txt");
     }
 
     public void win(int increaseValue){
