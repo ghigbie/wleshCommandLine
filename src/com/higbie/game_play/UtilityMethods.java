@@ -1,8 +1,6 @@
 package com.higbie.game_play;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
+import java.io.*;
 import java.nio.Buffer;
 import java.util.concurrent.TimeUnit;
 
@@ -21,13 +19,25 @@ public class UtilityMethods {
                 " \\ \\_____\\  \\ \\_\\ \\_\\  \\ \\_\\ \\ \\_\\  \\ \\_____\\        \\ \\_____\\  \\ \\__|    \\ \\_____\\  \\ \\_\\ \\_\\    \n" +
                 "  \\/_____/   \\/_/\\/_/   \\/_/  \\/_/   \\/_____/         \\/_____/   \\/_/      \\/_____/   \\/_/ /_/    \n" +
                 "                                                                                                  ");
+        //prints game over line
+        File file = new File("src/com/higbie/textfiles/game_over.txt");
+        try(FileReader fileReader = new FileReader(file)){
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+            String line = null;
+            while((line = bufferedReader.readLine()) != null){
+                System.out.println(line);
+            }
+        } catch (Exception e){
+            System.out.println("There was an error: "+ e);
+        }
         printStarLine();
     }
 
     public static void startGamePrint(){
         printStarLine();
+
         //prints welcome message
-        File file = new File("src/com/hine/textfiles/welcome.txt");
+        File file = new File("src/com/higbie/textfiles/welcome.txt");
         try(FileReader fileReader = new FileReader(file)){
             String line = null;
             BufferedReader bufferedReader = new BufferedReader(fileReader);
@@ -37,12 +47,6 @@ public class UtilityMethods {
         }catch (Exception e){
             System.out.println("There was an error: "+ e);
         }
-        System.out.println(" __     __     ______     __         ______     ______     __    __     ______    \n" +
-                "/\\ \\  _ \\ \\   /\\  ___\\   /\\ \\       /\\  ___\\   /\\  __ \\   /\\ \"-./  \\   /\\  ___\\   \n" +
-                "\\ \\ \\/ \".\\ \\  \\ \\  __\\   \\ \\ \\____  \\ \\ \\____  \\ \\ \\/\\ \\  \\ \\ \\-./\\ \\  \\ \\  __\\   \n" +
-                " \\ \\__/\".~\\_\\  \\ \\_____\\  \\ \\_____\\  \\ \\_____\\  \\ \\_____\\  \\ \\_\\ \\ \\_\\  \\ \\_____\\ \n" +
-                "  \\/_/   \\/_/   \\/_____/   \\/_____/   \\/_____/   \\/_____/   \\/_/  \\/_/   \\/_____/ \n" +
-                "                                                                                  ");
         printStarLine();
     }
 
