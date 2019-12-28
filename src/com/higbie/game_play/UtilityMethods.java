@@ -1,5 +1,9 @@
 package com.higbie.game_play;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.nio.Buffer;
 import java.util.concurrent.TimeUnit;
 
 public class UtilityMethods {
@@ -22,6 +26,17 @@ public class UtilityMethods {
 
     public static void startGamePrint(){
         printStarLine();
+        //prints welcome message
+        File file = new File("src/com/hine/textfiles/welcome.txt");
+        try(FileReader fileReader = new FileReader(file)){
+            String line = null;
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+            while((line = bufferedReader.readLine()) != null){
+                System.out.println(line);
+            }
+        }catch (Exception e){
+            System.out.println("There was an error: "+ e);
+        }
         System.out.println(" __     __     ______     __         ______     ______     __    __     ______    \n" +
                 "/\\ \\  _ \\ \\   /\\  ___\\   /\\ \\       /\\  ___\\   /\\  __ \\   /\\ \"-./  \\   /\\  ___\\   \n" +
                 "\\ \\ \\/ \".\\ \\  \\ \\  __\\   \\ \\ \\____  \\ \\ \\____  \\ \\ \\/\\ \\  \\ \\ \\-./\\ \\  \\ \\  __\\   \n" +
